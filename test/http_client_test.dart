@@ -36,7 +36,7 @@ void main() {
       var request = client.getUrl(new Uri.http('localhost:$port', '/'));
       var response = request.close();
 
-      expect(response.statusCode, io.HttpStatus.NO_CONTENT);
+      expect(response.statusCode, io.HttpStatus.noContent);
       expect(response.body, '');
     });
   });
@@ -44,10 +44,10 @@ void main() {
 
 void startSimpleServer(SendPort send) {
   io.HttpServer
-      .bind(io.InternetAddress.ANY_IP_V4, 0)
+      .bind(io.InternetAddress.anyIPv4, 0)
       .then((io.HttpServer server) {
     server.listen((io.HttpRequest request) {
-      request.response.statusCode = io.HttpStatus.NO_CONTENT;
+      request.response.statusCode = io.HttpStatus.noContent;
       request.response.close();
     });
     send.send(server.port);

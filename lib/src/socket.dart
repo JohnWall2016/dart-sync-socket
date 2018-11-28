@@ -48,7 +48,7 @@ class SocketSync {
   /**
    * Writes [obj].toString() to socket encoded with [encoding].
    */
-  void writeAsString(Object obj, {Encoding encoding: UTF8}) {
+  void writeAsString(Object obj, {Encoding encoding: utf8}) {
     writeAsBytes(encoding.encode(obj.toString()));
   }
 
@@ -75,7 +75,7 @@ class SocketSync {
    * Reads all remaining daata on socket and closes it, using [encoding] to
    * transform data into a [String].
    */
-  String readAsString({Encoding encoding: UTF8}) =>
+  String readAsString({Encoding encoding: utf8}) =>
       encoding.decode(readAsBytes());
 
   void close() {

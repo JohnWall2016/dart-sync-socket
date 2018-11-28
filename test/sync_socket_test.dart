@@ -42,7 +42,7 @@ void main() {
 }
 
 void startSimpleServer(SendPort send) {
-  io.ServerSocket.bind(io.InternetAddress.ANY_IP_V4, 0).then((server) {
+  io.ServerSocket.bind(io.InternetAddress.anyIPv4, 0).then((server) {
     server.listen((socket) {
       socket.listen((data) {
         var str = new String.fromCharCodes(data);
