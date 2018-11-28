@@ -18,8 +18,11 @@ set -e
 
 cd $(dirname $0)
 SCRIPT_DIR=$(pwd)
-DART_BIN=$(which dart)
-DART_SDK_DIR=$(dirname $DART_BIN)/..
+if [ -z "$DART_SDK_DIR" ]
+then
+  DART_BIN=$(which dart)
+  DART_SDK_DIR=$(dirname $DART_BIN)/..
+fi
 PLATFORM="$(uname -s)"
 DART_VERSION=$(dart --version 2>&1)
 case "$DART_VERSION" in
