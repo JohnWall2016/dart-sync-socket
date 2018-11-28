@@ -72,7 +72,7 @@ class SocketSync {
   }
 
   /**
-   * Reads all remaining daata on socket and closes it, using [encoding] to
+   * Reads all remaining data on socket and closes it, using [encoding] to
    * transform data into a [String].
    */
   String readAsString({Encoding encoding: utf8}) =>
