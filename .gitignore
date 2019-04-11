@@ -1,8 +1,10 @@
 .DS_Store
 packages
 pubspec.lock
+.packages
 .project
 .buildlog
+*.dylib
 *.o
 *.so
 .idea
