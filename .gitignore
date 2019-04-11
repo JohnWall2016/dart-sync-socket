@@ -5,5 +5,13 @@ pubspec.lock
 .buildlog
 *.o
 *.so
-.idea/
-.pub/
+.idea
+.pub
+*.obj
+*.dll
+*.exp
+*.lib
+.dart_tool
+!.vscode/*.json
+.vscode/ipch
+.packages

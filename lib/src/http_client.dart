@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-part of sync.socket;
+part of sync_socket;
 
 /**
  * A simple synchronous HTTP client.
